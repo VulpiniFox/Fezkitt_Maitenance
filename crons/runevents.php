@@ -18,7 +18,7 @@ if (date("H") == 22 ||
 
 ini_set('display_errors', 'On');
 error_reporting(E_ALL);
-
+echo 'running events';
 require_once 'settings.php';
 exit();
 require_once Fez\INC_ROOT . 'configure.php';
