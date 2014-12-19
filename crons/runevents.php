@@ -99,9 +99,9 @@ $Class = $HoursArr[$Hour];
 $Bracket = $MinutesArr[$Minute];
 $Circuit = $CircuitsArr[$Hour];
 
-//$Circuit = '1';
-//$Class = 'Conformation';
-//$Bracket = 'World';
+$Circuit = '1';
+$Class = 'Conformation';
+$Bracket = 'Local';
 
 
 echo "Bracket: " . $Bracket . " Discipline: " . $Class . " Circuit: " . $Circuit . "\n";
