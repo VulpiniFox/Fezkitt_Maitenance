@@ -20,6 +20,7 @@ ini_set('display_errors', 'On');
 error_reporting(E_ALL);
 
 require_once 'settings.php';
+exit();
 require_once Fez\INC_ROOT . 'configure.php';
 require_once Fez\FUNC_ROOT . 'AnimalFuncs.php';
 
