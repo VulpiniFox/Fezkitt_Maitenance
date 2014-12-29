@@ -8,7 +8,7 @@
 #
 # this script contains basic configurations for the site pages/scripts
 
-ini_set('display_errors', 'Off');
+ini_set('display_errors', 'On');
 error_reporting(E_ALL);
 date_default_timezone_set('America/New_York');
 //ini_set('arg_separator.output','&amp;');

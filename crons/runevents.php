@@ -20,7 +20,6 @@ ini_set('display_errors', 'On');
 error_reporting(E_ALL);
 echo 'running events';
 require_once 'settings.php';
-exit();
 require_once Fez\INC_ROOT . 'configure.php';
 require_once Fez\FUNC_ROOT . 'AnimalFuncs.php';
 
@@ -100,9 +99,9 @@ $Class = $HoursArr[$Hour];
 $Bracket = $MinutesArr[$Minute];
 $Circuit = $CircuitsArr[$Hour];
 
-$Circuit = '1';
-$Class = 'Conformation';
-$Bracket = 'Local';
+//$Circuit = '1';
+//$Class = 'Conformation';
+//$Bracket = 'Local';
 
 
 echo "Bracket: " . $Bracket . " Discipline: " . $Class . " Circuit: " . $Circuit . "\n";
