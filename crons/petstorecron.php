@@ -37,7 +37,7 @@ $selectdb = @mysql_select_db($dbname, $link) or die("The MySQL database couldn't
 $deleteferrets = mysql_query("DELETE FROM petstore ORDER BY id ASC");
 
 
-$amount = "8";
+$amount = "4";
 $name = "No Name";
 $prices = [
 	100,
