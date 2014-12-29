@@ -202,6 +202,7 @@ try {
 			$DB_Con->ResetQuery();
 		}
 
+                if ( empty($event) ) $event = '';
 		if ($FerretCount['totalferrets'] == '0')
 		{
 			$sql = "
