@@ -66,9 +66,9 @@ while ($aclok = mysql_fetch_array($getalok))
 			{
 				$url = "/train.php";
 			}
-			if ($jap['position'] == 'Racing Assitant')
+			if ($jap['position'] == 'Event Assitant')
 			{
-				$url = "/race.php";
+				$url = "/searchevents.php";
 			}
 
 			$new = "3";
