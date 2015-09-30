@@ -23,23 +23,136 @@ $selectdb = @mysql_select_db($dbname, $link) or die("The MySQL database couldn't
 // END DB CONNECT
 // GET ALL FERRETS AND GIVE THEM A SECOND CHANCE
 
-$selectd = mysql_query("SELECT id, name, owner FROM ferrets WHERE age > 336 OR health < -300");
-while ($death = mysql_fetch_array($selectd))
+$selecta = mysql_query("SELECT id, name, owner FROM ferrets WHERE age >= 288 AND age < 312 OR health < 0 AND health > -50");
+while ($deatha = mysql_fetch_array($selecta))
 {
-	$chance = mt_rand(1, 24);
+	$chancea = mt_rand(1, 29);
 
-	if ($chance == 1)
+	if ($chancea == 1)
 	{
 // ALERT THE MEMBER
 
-		$MsgTitle = "R.I.P - " . $death['name'] . ".";
-		$Msg = $death['name'] . " has passed away.";
+		$MsgTitle = "R.I.P - " . $deatha['name'] . ".";
+		$Msg = $deatha['name'] . " has passed away.";
 
-		\Fez\InsertAlert($DB_Con, $death['owner'], $Msg, $MsgTitle);
+		\Fez\InsertAlert($DB_Con, $deatha['owner'], $Msg, $MsgTitle);
 
-		$deleterip = mysql_query("UPDATE ferrets SET owner = -1 WHERE id = " . $death['id'] . " LIMIT 1");
-		$unattachitems = mysql_query("UPDATE items SET assignedto = 0 WHERE assignedto = " . $death['id']);
+		$deleterip = mysql_query("UPDATE ferrets SET owner = -1 WHERE id = " . $deatha['id'] . " LIMIT 1");
+		$unattachitems = mysql_query("UPDATE items SET assignedto = 0 WHERE assignedto = " . $deatha['id']);
 	}
 }
 
+$selectb = mysql_query("SELECT id, name, owner FROM ferrets WHERE age >= 312 AND age < 336 OR health <= -50 AND health > -100");
+while ($deathb = mysql_fetch_array($selectb))
+{
+	$chanceb = mt_rand(1, 12);
+
+	if ($chanceb == 1)
+	{
+// ALERT THE MEMBER
+
+		$MsgTitle = "R.I.P - " . $deathb['name'] . ".";
+		$Msg = $deathb['name'] . " has passed away.";
+
+		\Fez\InsertAlert($DB_Con, $deathb['owner'], $Msg, $MsgTitle);
+
+		$deleterip = mysql_query("UPDATE ferrets SET owner = -1 WHERE id = " . $deathb['id'] . " LIMIT 1");
+		$unattachitems = mysql_query("UPDATE items SET assignedto = 0 WHERE assignedto = " . $deathb['id']);
+	}
+}
+
+$selectc = mysql_query("SELECT id, name, owner FROM ferrets WHERE age >= 336 AND age < 384 OR health <= -100 AND health > -200");
+while ($deathc = mysql_fetch_array($selectc))
+{
+	$chancec = mt_rand(1, 100);
+
+	if ($chancec < 20)
+	{
+// ALERT THE MEMBER
+
+		$MsgTitle = "R.I.P - " . $deathc['name'] . ".";
+		$Msg = $deathc['name'] . " has passed away.";
+
+		\Fez\InsertAlert($DB_Con, $deathc['owner'], $Msg, $MsgTitle);
+
+		$deleterip = mysql_query("UPDATE ferrets SET owner = -1 WHERE id = " . $deathc['id'] . " LIMIT 1");
+		$unattachitems = mysql_query("UPDATE items SET assignedto = 0 WHERE assignedto = " . $deathc['id']);
+	}
+}
+
+$selectd = mysql_query("SELECT id, name, owner FROM ferrets WHERE age >= 384 AND age < 432 OR health <= -200 AND health > -300");
+while ($deathd = mysql_fetch_array($selectd))
+{
+	$chanced = mt_rand(1, 20);
+
+	if ($chanced < 10)
+	{
+// ALERT THE MEMBER
+
+		$MsgTitle = "R.I.P - " . $deathd['name'] . ".";
+		$Msg = $deathd['name'] . " has passed away.";
+
+		\Fez\InsertAlert($DB_Con, $deathd['owner'], $Msg, $MsgTitle);
+
+		$deleterip = mysql_query("UPDATE ferrets SET owner = -1 WHERE id = " . $deathd['id'] . " LIMIT 1");
+		$unattachitems = mysql_query("UPDATE items SET assignedto = 0 WHERE assignedto = " . $deathd['id']);
+	}
+}
+
+$selecte = mysql_query("SELECT id, name, owner FROM ferrets WHERE age >= 432 AND age < 480 OR health <= -300 AND health > -400");
+while ($deathe = mysql_fetch_array($selecte))
+{
+	$chancee = mt_rand(1, 100);
+
+	if ($chancee < 86)
+	{
+// ALERT THE MEMBER
+
+		$MsgTitle = "R.I.P - " . $deathe['name'] . ".";
+		$Msg = $deathe['name'] . " has passed away.";
+
+		\Fez\InsertAlert($DB_Con, $deathe['owner'], $Msg, $MsgTitle);
+
+		$deleterip = mysql_query("UPDATE ferrets SET owner = -1 WHERE id = " . $deathe['id'] . " LIMIT 1");
+		$unattachitems = mysql_query("UPDATE items SET assignedto = 0 WHERE assignedto = " . $deathe['id']);
+	}
+}
+
+$selectf = mysql_query("SELECT id, name, owner FROM ferrets WHERE age >= 480 AND age < 528 OR health <= -400 AND health > -500");
+while ($deathf = mysql_fetch_array($selectf))
+{
+	$chancef = mt_rand(1, 300);
+
+	if ($chancef < 299)
+	{
+// ALERT THE MEMBER
+
+		$MsgTitle = "R.I.P - " . $deathf['name'] . ".";
+		$Msg = $deathf['name'] . " has passed away.";
+
+		\Fez\InsertAlert($DB_Con, $deathf['owner'], $Msg, $MsgTitle);
+
+		$deleterip = mysql_query("UPDATE ferrets SET owner = -1 WHERE id = " . $deathf['id'] . " LIMIT 1");
+		$unattachitems = mysql_query("UPDATE items SET assignedto = 0 WHERE assignedto = " . $deathf['id']);
+	}
+}
+
+$selectg = mysql_query("SELECT id, name, owner FROM ferrets WHERE age >= 528 OR health <= -500");
+while ($deathg = mysql_fetch_array($selectg))
+{
+	$chanceg = mt_rand(1, 1000);
+
+	if ($chanceg < 999)
+	{
+// ALERT THE MEMBER
+
+		$MsgTitle = "R.I.P - " . $deathg['name'] . ".";
+		$Msg = $deathg['name'] . " has passed away.";
+
+		\Fez\InsertAlert($DB_Con, $deathg['owner'], $Msg, $MsgTitle);
+
+		$deleterip = mysql_query("UPDATE ferrets SET owner = -1 WHERE id = " . $deathg['id'] . " LIMIT 1");
+		$unattachitems = mysql_query("UPDATE items SET assignedto = 0 WHERE assignedto = " . $deathg['id']);
+	}
+}
 echo 'Completed Death Cron...';
