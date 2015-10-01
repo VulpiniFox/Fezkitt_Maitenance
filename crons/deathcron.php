@@ -37,7 +37,7 @@ while ($deatha = mysql_fetch_array($selecta))
 
 		\Fez\InsertAlert($DB_Con, $deatha['owner'], $Msg, $MsgTitle);
 
-		$deleterip = mysql_query("UPDATE ferrets SET owner = -1 WHERE id = " . $deatha['id'] . " LIMIT 1");
+		$deleterip = mysql_query("UPDATE ferrets SET owner = -1, incage = 0 WHERE id = " . $deatha['id'] . " LIMIT 1");
 		$unattachitems = mysql_query("UPDATE items SET assignedto = 0 WHERE assignedto = " . $deatha['id']);
 	}
 }
@@ -56,7 +56,7 @@ while ($deathb = mysql_fetch_array($selectb))
 
 		\Fez\InsertAlert($DB_Con, $deathb['owner'], $Msg, $MsgTitle);
 
-		$deleterip = mysql_query("UPDATE ferrets SET owner = -1 WHERE id = " . $deathb['id'] . " LIMIT 1");
+		$deleterip = mysql_query("UPDATE ferrets SET owner = -1, incage = 0 WHERE id = " . $deathb['id'] . " LIMIT 1");
 		$unattachitems = mysql_query("UPDATE items SET assignedto = 0 WHERE assignedto = " . $deathb['id']);
 	}
 }
@@ -75,7 +75,7 @@ while ($deathc = mysql_fetch_array($selectc))
 
 		\Fez\InsertAlert($DB_Con, $deathc['owner'], $Msg, $MsgTitle);
 
-		$deleterip = mysql_query("UPDATE ferrets SET owner = -1 WHERE id = " . $deathc['id'] . " LIMIT 1");
+		$deleterip = mysql_query("UPDATE ferrets SET owner = -1, incage = 0 WHERE id = " . $deathc['id'] . " LIMIT 1");
 		$unattachitems = mysql_query("UPDATE items SET assignedto = 0 WHERE assignedto = " . $deathc['id']);
 	}
 }
@@ -94,7 +94,7 @@ while ($deathd = mysql_fetch_array($selectd))
 
 		\Fez\InsertAlert($DB_Con, $deathd['owner'], $Msg, $MsgTitle);
 
-		$deleterip = mysql_query("UPDATE ferrets SET owner = -1 WHERE id = " . $deathd['id'] . " LIMIT 1");
+		$deleterip = mysql_query("UPDATE ferrets SET owner = -1, incage = 0 WHERE id = " . $deathd['id'] . " LIMIT 1");
 		$unattachitems = mysql_query("UPDATE items SET assignedto = 0 WHERE assignedto = " . $deathd['id']);
 	}
 }
@@ -113,7 +113,7 @@ while ($deathe = mysql_fetch_array($selecte))
 
 		\Fez\InsertAlert($DB_Con, $deathe['owner'], $Msg, $MsgTitle);
 
-		$deleterip = mysql_query("UPDATE ferrets SET owner = -1 WHERE id = " . $deathe['id'] . " LIMIT 1");
+		$deleterip = mysql_query("UPDATE ferrets SET owner = -1, incage = 0 WHERE id = " . $deathe['id'] . " LIMIT 1");
 		$unattachitems = mysql_query("UPDATE items SET assignedto = 0 WHERE assignedto = " . $deathe['id']);
 	}
 }
@@ -132,7 +132,7 @@ while ($deathf = mysql_fetch_array($selectf))
 
 		\Fez\InsertAlert($DB_Con, $deathf['owner'], $Msg, $MsgTitle);
 
-		$deleterip = mysql_query("UPDATE ferrets SET owner = -1 WHERE id = " . $deathf['id'] . " LIMIT 1");
+		$deleterip = mysql_query("UPDATE ferrets SET owner = -1, incage = 0 WHERE id = " . $deathf['id'] . " LIMIT 1");
 		$unattachitems = mysql_query("UPDATE items SET assignedto = 0 WHERE assignedto = " . $deathf['id']);
 	}
 }
@@ -151,7 +151,7 @@ while ($deathg = mysql_fetch_array($selectg))
 
 		\Fez\InsertAlert($DB_Con, $deathg['owner'], $Msg, $MsgTitle);
 
-		$deleterip = mysql_query("UPDATE ferrets SET owner = -1 WHERE id = " . $deathg['id'] . " LIMIT 1");
+		$deleterip = mysql_query("UPDATE ferrets SET owner = -1, incage = 0 WHERE id = " . $deathg['id'] . " LIMIT 1");
 		$unattachitems = mysql_query("UPDATE items SET assignedto = 0 WHERE assignedto = " . $deathg['id']);
 	}
 }
