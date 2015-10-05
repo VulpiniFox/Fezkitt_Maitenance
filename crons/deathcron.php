@@ -26,7 +26,7 @@ $selectdb = @mysql_select_db($dbname, $link) or die("The MySQL database couldn't
 $selecta = mysql_query("SELECT id, name, owner FROM ferrets WHERE age >= 288 AND age < 312 OR health < 0 AND health > -50");
 while ($deatha = mysql_fetch_array($selecta))
 {
-	$chancea = mt_rand(1, 29);
+	$chancea = mt_rand(1, 40);
 
 	if ($chancea == 1)
 	{
@@ -37,7 +37,7 @@ while ($deatha = mysql_fetch_array($selecta))
 
 		\Fez\InsertAlert($DB_Con, $deatha['owner'], $Msg, $MsgTitle);
 
-		$deleterip = mysql_query("UPDATE ferrets SET owner = -1, incage = 0 WHERE id = " . $deatha['id'] . " LIMIT 1");
+		$deleterip = mysql_query("UPDATE ferrets SET owner = -1 AND incage = 0 WHERE id = " . $deatha['id'] . " LIMIT 1");
 		$unattachitems = mysql_query("UPDATE items SET assignedto = 0 WHERE assignedto = " . $deatha['id']);
 	}
 }
@@ -45,7 +45,7 @@ while ($deatha = mysql_fetch_array($selecta))
 $selectb = mysql_query("SELECT id, name, owner FROM ferrets WHERE age >= 312 AND age < 336 OR health <= -50 AND health > -100");
 while ($deathb = mysql_fetch_array($selectb))
 {
-	$chanceb = mt_rand(1, 12);
+	$chanceb = mt_rand(1, 18);
 
 	if ($chanceb == 1)
 	{
@@ -56,7 +56,7 @@ while ($deathb = mysql_fetch_array($selectb))
 
 		\Fez\InsertAlert($DB_Con, $deathb['owner'], $Msg, $MsgTitle);
 
-		$deleterip = mysql_query("UPDATE ferrets SET owner = -1, incage = 0 WHERE id = " . $deathb['id'] . " LIMIT 1");
+		$deleterip = mysql_query("UPDATE ferrets SET owner = -1 AND incage = 0 WHERE id = " . $deathb['id'] . " LIMIT 1");
 		$unattachitems = mysql_query("UPDATE items SET assignedto = 0 WHERE assignedto = " . $deathb['id']);
 	}
 }
@@ -64,9 +64,9 @@ while ($deathb = mysql_fetch_array($selectb))
 $selectc = mysql_query("SELECT id, name, owner FROM ferrets WHERE age >= 336 AND age < 384 OR health <= -100 AND health > -200");
 while ($deathc = mysql_fetch_array($selectc))
 {
-	$chancec = mt_rand(1, 100);
+	$chancec = mt_rand(1, 5);
 
-	if ($chancec < 20)
+	if ($chancec == 1)
 	{
 // ALERT THE MEMBER
 
@@ -75,7 +75,7 @@ while ($deathc = mysql_fetch_array($selectc))
 
 		\Fez\InsertAlert($DB_Con, $deathc['owner'], $Msg, $MsgTitle);
 
-		$deleterip = mysql_query("UPDATE ferrets SET owner = -1, incage = 0 WHERE id = " . $deathc['id'] . " LIMIT 1");
+		$deleterip = mysql_query("UPDATE ferrets SET owner = -1 AND incage = 0 WHERE id = " . $deathc['id'] . " LIMIT 1");
 		$unattachitems = mysql_query("UPDATE items SET assignedto = 0 WHERE assignedto = " . $deathc['id']);
 	}
 }
@@ -83,9 +83,9 @@ while ($deathc = mysql_fetch_array($selectc))
 $selectd = mysql_query("SELECT id, name, owner FROM ferrets WHERE age >= 384 AND age < 432 OR health <= -200 AND health > -300");
 while ($deathd = mysql_fetch_array($selectd))
 {
-	$chanced = mt_rand(1, 20);
+	$chanced = mt_rand(1, 3);
 
-	if ($chanced < 10)
+	if ($chanced == 1)
 	{
 // ALERT THE MEMBER
 
@@ -94,7 +94,7 @@ while ($deathd = mysql_fetch_array($selectd))
 
 		\Fez\InsertAlert($DB_Con, $deathd['owner'], $Msg, $MsgTitle);
 
-		$deleterip = mysql_query("UPDATE ferrets SET owner = -1, incage = 0 WHERE id = " . $deathd['id'] . " LIMIT 1");
+		$deleterip = mysql_query("UPDATE ferrets SET owner = -1 AND incage = 0 WHERE id = " . $deathd['id'] . " LIMIT 1");
 		$unattachitems = mysql_query("UPDATE items SET assignedto = 0 WHERE assignedto = " . $deathd['id']);
 	}
 }
@@ -102,9 +102,9 @@ while ($deathd = mysql_fetch_array($selectd))
 $selecte = mysql_query("SELECT id, name, owner FROM ferrets WHERE age >= 432 AND age < 480 OR health <= -300 AND health > -400");
 while ($deathe = mysql_fetch_array($selecte))
 {
-	$chancee = mt_rand(1, 100);
+	$chancee = mt_rand(1, 5);
 
-	if ($chancee < 86)
+	if ($chancee < 4)
 	{
 // ALERT THE MEMBER
 
@@ -113,7 +113,7 @@ while ($deathe = mysql_fetch_array($selecte))
 
 		\Fez\InsertAlert($DB_Con, $deathe['owner'], $Msg, $MsgTitle);
 
-		$deleterip = mysql_query("UPDATE ferrets SET owner = -1, incage = 0 WHERE id = " . $deathe['id'] . " LIMIT 1");
+		$deleterip = mysql_query("UPDATE ferrets SET owner = -1 AND incage = 0 WHERE id = " . $deathe['id'] . " LIMIT 1");
 		$unattachitems = mysql_query("UPDATE items SET assignedto = 0 WHERE assignedto = " . $deathe['id']);
 	}
 }
@@ -121,9 +121,9 @@ while ($deathe = mysql_fetch_array($selecte))
 $selectf = mysql_query("SELECT id, name, owner FROM ferrets WHERE age >= 480 AND age < 528 OR health <= -400 AND health > -500");
 while ($deathf = mysql_fetch_array($selectf))
 {
-	$chancef = mt_rand(1, 300);
+	$chancef = mt_rand(1, 4);
 
-	if ($chancef < 299)
+	if ($chancef < 4)
 	{
 // ALERT THE MEMBER
 
@@ -132,7 +132,7 @@ while ($deathf = mysql_fetch_array($selectf))
 
 		\Fez\InsertAlert($DB_Con, $deathf['owner'], $Msg, $MsgTitle);
 
-		$deleterip = mysql_query("UPDATE ferrets SET owner = -1, incage = 0 WHERE id = " . $deathf['id'] . " LIMIT 1");
+		$deleterip = mysql_query("UPDATE ferrets SET owner = -1 AND incage = 0 WHERE id = " . $deathf['id'] . " LIMIT 1");
 		$unattachitems = mysql_query("UPDATE items SET assignedto = 0 WHERE assignedto = " . $deathf['id']);
 	}
 }
@@ -140,9 +140,9 @@ while ($deathf = mysql_fetch_array($selectf))
 $selectg = mysql_query("SELECT id, name, owner FROM ferrets WHERE age >= 528 OR health <= -500");
 while ($deathg = mysql_fetch_array($selectg))
 {
-	$chanceg = mt_rand(1, 1000);
+	$chanceg = mt_rand(1, 5);
 
-	if ($chanceg < 999)
+	if ($chanceg < 5)
 	{
 // ALERT THE MEMBER
 
@@ -151,7 +151,7 @@ while ($deathg = mysql_fetch_array($selectg))
 
 		\Fez\InsertAlert($DB_Con, $deathg['owner'], $Msg, $MsgTitle);
 
-		$deleterip = mysql_query("UPDATE ferrets SET owner = -1, incage = 0 WHERE id = " . $deathg['id'] . " LIMIT 1");
+		$deleterip = mysql_query("UPDATE ferrets SET owner = -1 AND incage = 0 WHERE id = " . $deathg['id'] . " LIMIT 1");
 		$unattachitems = mysql_query("UPDATE items SET assignedto = 0 WHERE assignedto = " . $deathg['id']);
 	}
 }
