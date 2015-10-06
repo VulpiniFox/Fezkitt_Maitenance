@@ -23,24 +23,6 @@ $selectdb = @mysql_select_db($dbname, $link) or die("The MySQL database couldn't
 // END DB CONNECT
 // GET ALL FERRETS AND GIVE THEM A SECOND CHANCE
 
-$selecta = mysql_query("SELECT id, name, owner FROM ferrets WHERE age >= 288 AND age < 312");
-while ($deatha = mysql_fetch_array($selecta))
-{
-	$chancea = mt_rand(1, 40);
-
-	if ($chancea == 1)
-	{
-// ALERT THE MEMBER
-
-		$MsgTitle = "R.I.P - " . $deatha['name'] . ".";
-		$Msg = $deatha['name'] . " has passed away.";
-
-		\Fez\InsertAlert($DB_Con, $deatha['owner'], $Msg, $MsgTitle);
-
-		$deleterip = mysql_query("UPDATE ferrets SET owner = -1 AND incage = 0 WHERE id = " . $deatha['id'] . " LIMIT 1");
-		$unattachitems = mysql_query("UPDATE items SET assignedto = 0 WHERE assignedto = " . $deatha['id']);
-	}
-}
 
 $selectb = mysql_query("SELECT id, name, owner FROM ferrets WHERE age >= 312 AND age < 336");
 while ($deathb = mysql_fetch_array($selectb))
