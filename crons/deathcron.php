@@ -23,7 +23,7 @@ $selectdb = @mysql_select_db($dbname, $link) or die("The MySQL database couldn't
 // END DB CONNECT
 // GET ALL FERRETS AND GIVE THEM A SECOND CHANCE
 
-$selecta = mysql_query("SELECT id, name, owner FROM ferrets WHERE age >= 288 AND age < 312 OR health < 0 AND health > -50");
+$selecta = mysql_query("SELECT id, name, owner FROM ferrets WHERE age >= 288 AND age < 312");
 while ($deatha = mysql_fetch_array($selecta))
 {
 	$chancea = mt_rand(1, 40);
@@ -42,7 +42,7 @@ while ($deatha = mysql_fetch_array($selecta))
 	}
 }
 
-$selectb = mysql_query("SELECT id, name, owner FROM ferrets WHERE age >= 312 AND age < 336 OR health <= -50 AND health > -100");
+$selectb = mysql_query("SELECT id, name, owner FROM ferrets WHERE age >= 312 AND age < 336");
 while ($deathb = mysql_fetch_array($selectb))
 {
 	$chanceb = mt_rand(1, 18);
