@@ -23,8 +23,8 @@ $selectdb = @mysql_select_db($dbname, $link) or die("The MySQL database couldn't
 // END DB CONNECT
 // GET ALL FERRETS AND GIVE THEM A SECOND CHANCE
 
-$selectunlocked = mysql_quert("SELECT id FROM players WHERE accountlock = 0");
-$selectb = mysql_query("SELECT id, name, owner FROM ferrets WHERE age >= 312 AND age < 336 AND owner = $selectunlocked");
+
+$selectb = mysql_query("SELECT id, name, owner FROM ferrets WHERE age >= 312 AND age < 336");
 while ($deathb = mysql_fetch_array($selectb))
 {
 	$chanceb = mt_rand(1, 18);
@@ -43,7 +43,7 @@ while ($deathb = mysql_fetch_array($selectb))
 	}
 }
 
-$selectc = mysql_query("SELECT id, name, owner FROM ferrets WHERE age >= 336 AND age < 384 OR health <= -100 AND health > -200 AND owner = $selectunlocked");
+$selectc = mysql_query("SELECT id, name, owner FROM ferrets WHERE age >= 336 AND age < 384 OR health <= -100 AND health > -200");
 while ($deathc = mysql_fetch_array($selectc))
 {
 	$chancec = mt_rand(1, 5);
@@ -62,7 +62,7 @@ while ($deathc = mysql_fetch_array($selectc))
 	}
 }
 
-$selectd = mysql_query("SELECT id, name, owner FROM ferrets WHERE age >= 384 AND age < 432 OR health <= -200 AND health > -300 AND owner = $selectunlocked");
+$selectd = mysql_query("SELECT id, name, owner FROM ferrets WHERE age >= 384 AND age < 432 OR health <= -200 AND health > -300");
 while ($deathd = mysql_fetch_array($selectd))
 {
 	$chanced = mt_rand(1, 3);
@@ -81,7 +81,7 @@ while ($deathd = mysql_fetch_array($selectd))
 	}
 }
 
-$selecte = mysql_query("SELECT id, name, owner FROM ferrets WHERE age >= 432 AND age < 480 OR health <= -300 AND health > -400 AND owner = $selectunlocked");
+$selecte = mysql_query("SELECT id, name, owner FROM ferrets WHERE age >= 432 AND age < 480 OR health <= -300 AND health > -400");
 while ($deathe = mysql_fetch_array($selecte))
 {
 	$chancee = mt_rand(1, 5);
@@ -100,7 +100,7 @@ while ($deathe = mysql_fetch_array($selecte))
 	}
 }
 
-$selectf = mysql_query("SELECT id, name, owner FROM ferrets WHERE age >= 480 AND age < 528 OR health <= -400 AND health > -500 AND owner = $selectunlocked");
+$selectf = mysql_query("SELECT id, name, owner FROM ferrets WHERE age >= 480 AND age < 528 OR health <= -400 AND health > -500");
 while ($deathf = mysql_fetch_array($selectf))
 {
 	$chancef = mt_rand(1, 4);
@@ -119,7 +119,7 @@ while ($deathf = mysql_fetch_array($selectf))
 	}
 }
 
-$selectg = mysql_query("SELECT id, name, owner FROM ferrets WHERE age >= 528 OR health <= -500 AND owner = $selectunlocked");
+$selectg = mysql_query("SELECT id, name, owner FROM ferrets WHERE age >= 528 OR health <= -500");
 while ($deathg = mysql_fetch_array($selectg))
 {
 	$chanceg = mt_rand(1, 5);
