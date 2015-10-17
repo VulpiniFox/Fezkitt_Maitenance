@@ -23,7 +23,7 @@ $selectdb = @mysql_select_db($dbname, $link) or die("The MySQL database couldn't
 // END DB CONNECT
 // GET ALL FERRETS AND GIVE THEM A SECOND CHANCE
 
-$selectunlocked = mysql_quert("SELECT id FROM players WHERE accountlock = 0");
+$selectunlocked = mysql_query("SELECT id FROM players WHERE accountlock = 0 AND id > 1");
 $selectb = mysql_query("SELECT id, name, owner FROM ferrets WHERE age >= 312 AND age < 336 AND owner = $selectunlocked");
 while ($deathb = mysql_fetch_array($selectb))
 {
