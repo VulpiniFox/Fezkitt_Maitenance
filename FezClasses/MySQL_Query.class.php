@@ -1364,14 +1364,13 @@ final class MySQL_Query extends QueryInterface
 
 	protected function BuildDeleteClause()
 	{
-		if ( empty($DeleteClause) ) $DeleteClause = ' ';
-                if ($this->Debug == \TRUE)
+		if ($this->Debug == \TRUE)
 		{
 			$LogData = __FILE__ . ' ' . __METHOD__ . ' Delete clause: ' . $DeleteClause;
 			$this->DB_Con->Debugging->WriteToLog($LogData);
 		}
 		return $DeleteClause;
-                
+
 		# end BuildSelectClause()
 	}
 

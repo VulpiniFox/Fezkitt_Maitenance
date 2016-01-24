@@ -9,7 +9,7 @@ require_once 'settings.php';
 require_once Fez\INC_ROOT . 'configure.php';
 $t1 = new Fez\code_timer;
 
-$dbhost = 'swgdb.cgnwvdsnszvj.us-east-1.rds.amazonaws.com';
+$dbhost = '10.0.0.6:3306';
 $dbuser = 'fez_user';
 $dbpass = 'T8rmQ6c!P$byGWA';
 $dbname = 'fezgamedb';

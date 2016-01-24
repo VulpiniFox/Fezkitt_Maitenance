@@ -9,7 +9,7 @@ require_once 'settings.php';
 require_once Fez\INC_ROOT . 'configure.php';
 $t1 = new Fez\code_timer;
 
-$dbhost = 'swgdb.cgnwvdsnszvj.us-east-1.rds.amazonaws.com';
+$dbhost = '10.0.0.6:3306';
 $dbuser = 'fez_user';
 $dbpass = 'T8rmQ6c!P$byGWA';
 $dbname = 'fezgamedb';
@@ -66,9 +66,9 @@ while ($aclok = mysql_fetch_array($getalok))
 			{
 				$url = "/train.php";
 			}
-			if ($jap['position'] == 'Event Assitant')
+			if ($jap['position'] == 'Racing Assitant')
 			{
-				$url = "/searchevents.php";
+				$url = "/race.php";
 			}
 
 			$new = "3";

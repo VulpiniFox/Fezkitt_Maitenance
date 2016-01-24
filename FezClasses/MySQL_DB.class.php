@@ -363,7 +363,7 @@ require_once('DBInterface.class.php');
 final class MySQL_DB extends DBInterface
 {
 
-	const DB_HOST = 'swgdb.cgnwvdsnszvj.us-east-1.rds.amazonaws.com';
+	const DB_HOST = '10.0.0.6:3306';
 	const DB_USER = 'fez_user';
 	const DB_PASS = 'T8rmQ6c!P$byGWA';
 	const DB_NAME = 'fezgamedb';

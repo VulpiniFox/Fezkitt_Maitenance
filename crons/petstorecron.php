@@ -22,7 +22,7 @@ ini_set('display_errors', 'On');
 require_once Fez\FUNC_ROOT . 'GeneFuncs.php';
 require_once Fez\FUNC_ROOT . 'AnimalFuncs.php';
 
-$dbhost = 'swgdb.cgnwvdsnszvj.us-east-1.rds.amazonaws.com';
+$dbhost = '10.0.0.6:3306';
 $dbuser = 'fez_user';
 $dbpass = 'T8rmQ6c!P$byGWA';
 $dbname = 'fezgamedb';
@@ -37,7 +37,7 @@ $selectdb = @mysql_select_db($dbname, $link) or die("The MySQL database couldn't
 $deleteferrets = mysql_query("DELETE FROM petstore ORDER BY id ASC");
 
 
-$amount = "4";
+$amount = "8";
 $name = "No Name";
 $prices = [
 	100,

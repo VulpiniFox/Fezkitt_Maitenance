@@ -11,7 +11,7 @@ $t1 = new Fez\code_timer;
 
 require_once Fez\FUNC_ROOT . 'AnimalFuncs.php';
 
-$dbhost = 'swgdb.cgnwvdsnszvj.us-east-1.rds.amazonaws.com';
+$dbhost = '10.0.0.6:3306';
 $dbuser = 'fez_user';
 $dbpass = 'T8rmQ6c!P$byGWA';
 $dbname = 'fezgamedb';
